@@ -31,7 +31,7 @@ if (!$question) {
 
 <div class="answers">
     <h3>Answers</h3>
-    
+
     <?php if (empty($answers)): ?>
         <p>No answers yet. Be the first to answer!</p>
     <?php else: ?>

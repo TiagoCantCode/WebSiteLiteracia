@@ -18,14 +18,14 @@ include 'includes/header.php';
 
 <div class="container">
     <h2>Search Results for "<?php echo htmlspecialchars($search_term); ?>"</h2>
-    
+
     <?php if (!empty($search_term) && !empty($results)): ?>
         <div class="search-results">
             <?php foreach ($results as $question): ?>
                 <div class="question">
                     <h3><a href="question.php?id=<?php echo $question['id']; ?>">
-                        <?php echo highlight_search_term(htmlspecialchars($question['title']), $search_term); ?>
-                    </a></h3>
+                            <?php echo highlight_search_term(htmlspecialchars($question['title']), $search_term); ?>
+                        </a></h3>
                     <p><?php echo highlight_search_term(truncateText(htmlspecialchars($question['body']), 200), $search_term); ?></p>
                     <div class="meta">
                         <span class="category"><?php echo htmlspecialchars($question['category']); ?></span>
