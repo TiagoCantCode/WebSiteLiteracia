@@ -17,7 +17,7 @@ try {
 <?php include 'includes/header.php'; ?>
 
 <div class="content-section">
-    <h2>Recent Health Questions</h2>
+    <h1>Recent Health Questions</h1>
     <p class="subheading">Trusted health information from verified professionals</p>
 
     <?php if (isset($error)): ?>
@@ -43,8 +43,9 @@ try {
 
     <div class="questions-list">
         <?php if (empty($questions)): ?>
-            <div class="no-results">
-                <p>No questions found. Be the first to <a href="ask.php">ask a question</a>!</p>
+            <div class="empty-state">
+                <p>No questions found yet.</p>
+                <a href="ask.php" class="cta-button">Ask the First Question</a>
             </div>
         <?php else: ?>
             <?php foreach ($questions as $question): ?>
