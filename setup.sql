@@ -3,10 +3,9 @@ USE health_qa;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL UNIQUE,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    is_creator BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -30,3 +29,14 @@ CREATE TABLE answers (
     FOREIGN KEY (question_id) REFERENCES questions(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+CREATE TABLE types (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name_type VARCHAR(20) NOT NULL
+); 
+
+INSERT INTO types (id, name_type) VALUES
+(1, 'administrador'),
+(2, 'utilizador');
+
+
