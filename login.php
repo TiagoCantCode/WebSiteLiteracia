@@ -114,18 +114,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <i class="fas fa-sign-in-alt"></i> Login
                 </button>
 
-                <div class="auth-divider">
-                    <span>or</span>
-                </div>
-
-                <button type="button" class="social-login google">
-                    <i class="fab fa-google"></i> Continue with Google
-                </button>
-
-                <button type="button" class="social-login facebook">
-                    <i class="fab fa-facebook-f"></i> Continue with Facebook
-                </button>
-
                 <div class="auth-footer">
                     Don't have an account? <a href="register.php" class="auth-link">Create one</a>
                 </div>
@@ -133,31 +121,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="auth-right">
-            <div class="auth-illustration">
-                <img src="images/login-illustration.svg" alt="Health professionals discussing" aria-hidden="true">
-                <div class="auth-quote">
-                    <blockquote>
-                        "Your health questions answered by verified professionals"
-                    </blockquote>
-                </div>
+            <div class="auth-quote">
+                <blockquote>
+                    "Your health questions answered by verified professionals"
+                </blockquote>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 <script>
-// Password visibility toggle
-document.querySelector('.toggle-password').addEventListener('click', function() {
-    const passwordInput = document.getElementById('password');
-    const icon = this.querySelector('i');
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        icon.classList.replace('fa-eye', 'fa-eye-slash');
-    } else {
-        passwordInput.type = 'password';
-        icon.classList.replace('fa-eye-slash', 'fa-eye');
-    }
-});
+    // Password visibility toggle
+    document.querySelector('.toggle-password').addEventListener('click', function() {
+        const passwordInput = document.getElementById('password');
+        const icon = this.querySelector('i');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.replace('fa-eye', 'fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.replace('fa-eye-slash', 'fa-eye');
+        }
+    });
 </script>
 
 <?php include 'includes/footer.php'; ?>

@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 /* ===== CSS Variables & Reset ===== */
 :root {
   --primary: #2ecc71;       /* Main brand color */
@@ -52,7 +54,7 @@ body::before {
 
 /* ===== Typography ===== */
 h1, h2, h3, h4 {
-  color: var(--dark);
+  color: var(#fff);
   line-height: 1.2;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -459,143 +461,7 @@ footer {
   }
 }
 
-/* Login Page Specific Styles */
-.login-container {
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-.auth-form {
-    margin-top: 2rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: var(--radius);
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-input:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
-}
-
-.auth-links {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-}
-
-.auth-links a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-.auth-links a:hover {
-    text-decoration: underline;
-}
-
-/* ===== CSS Variables & Reset ===== */
-:root {
-  --primary: #2ecc71;
-  --primary-dark: #27ae60;
-  --primary-light: #d5f5e3;
-  --accent: #16a085;
-  --light: #f5f7fa;
-  --dark: #34495e;
-  --text: #2c3e50;
-  --text-light: #7f8c8d;
-  --error: #e74c3c;
-  --radius: 8px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* ===== Base Styles ===== */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--light);
-  background-image: url('../images/health-pattern.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.92);
-  z-index: -1;
-}
-
-/* ===== Typography ===== */
-h1, h2, h3, h4 {
-  color: var(--dark);
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 2.5rem);
-}
-
-h2 {
-  font-size: clamp(1.75rem, 4vw, 2rem);
-}
-
-.subheading {
-  color: var(--text-light);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-/* ===== Layout Components ===== */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.content-section {
-  padding: 2rem 0;
-  flex: 1;
-}
-
-/* ===== Login Page Styles ===== */
+/* ===== Login/Auth Page Styles ===== */
 .auth-page {
   display: flex;
   align-items: center;
@@ -604,17 +470,41 @@ h2 {
 }
 
 .auth-container {
-  max-width: 500px;
-  width: 100%;
-  padding: 2.5rem;
-  background: white;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+    max-width: 500px; /* Keep this or adjust as needed */
+    width: 100%;
+    padding: 2.5rem;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    /* Remove any grid/flex properties if they exist */
+    display: block; /* Add this if needed */
 }
-
 .auth-header {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.auth-form {
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
 }
 
 /* Floating Form Styles */
@@ -740,6 +630,22 @@ h2 {
   text-decoration: underline;
 }
 
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.auth-links a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
 /* Login Button */
 .login-button {
   width: 100%;
@@ -765,17 +671,34 @@ h2 {
   text-decoration: underline;
 }
 
-/* Alert Styles */
-.alert {
-  padding: 1rem;
-  border-radius: var(--radius);
-  margin-bottom: 1.5rem;
+/* Lock icon styling */
+.password-icon {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin: 20px 0;
 }
 
-.alert-error {
-  background-color: #fdecea;
-  color: var(--error);
-  border-left: 4px solid var(--error);
+/* Password input wrapper */
+.password-wrapper {
+  position: relative;
+}
+
+/* Password toggle eye icon */
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+}
+
+.toggle-icon:hover {
+  color: #333;
 }
 
 /* Responsive Design */
@@ -791,4 +714,3 @@ h2 {
   }
 }
 
-/* [Rest of your existing CSS remains unchanged] */
