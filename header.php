@@ -35,11 +35,13 @@ if (empty($_SESSION['csrf_token'])) {
                         <li class="nav-item"><a href="profile.php"><i class="fas fa-user-edit"></i> Profile</a></li>
                         <li class="nav-item"><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     <?php else: ?>
-                        <li class="nav-item"><a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-                        <li class="nav-item highlight"><a href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li class="nav-item"><a href="signin.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li class="nav-item highlight"><a href="signup.php"><i class="fas fa-user-plus"></i> Register</a></li>
                     <?php endif; ?>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="container">
+
+    

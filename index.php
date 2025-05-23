@@ -1,5 +1,5 @@
 <?php
-// Strict types and error reporting
+
 declare(strict_types=1);
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -16,21 +16,6 @@ require_once __DIR__ . '/includes/functions.php';
 $questions = [];
 $error = '';
 $pageTitle = "Site Literacia para a Saúde";
-
-try {
-    // Validate PDO connection
-    if (!($pdo instanceof PDO)) {
-        throw new RuntimeException('Database connection failed');
-    }
-    
-    $questions = getRecentQuestions($pdo);
-} catch (PDOException $e) {
-    error_log("Database error: " . $e->getMessage());
-    $error = "We're experiencing technical difficulties. Please try again later.";
-} catch (Throwable $e) {
-    error_log("System error: " . $e->getMessage());
-    $error = "An unexpected error occurred.";
-}
 ?>
 
 <?php include 'includes/header.php'; ?>
